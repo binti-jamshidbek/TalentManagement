@@ -1,0 +1,19 @@
+server:
+  port: 3000
+
+spring:
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  profiles:
+    active: ${PROFILE:dev}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /api-docs
+
